@@ -1,0 +1,45 @@
+{
+  "name": "@chubbyts/chubbyts-eslint",
+  "version": "1.0.0",
+  "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
+  "keywords": [
+    "chubbyts",
+    "eslint"
+  ],
+  "author": "Dominik Zogg",
+  "license": "MIT",
+  "repository": "chubbyts/chubbyts-eslint",
+  "scripts": {
+    "cs-fix": "prettier --write eslintrc.ts",
+    "cs": "prettier --check eslintrc.ts",
+    "build": "rm -Rf dist && tsc",
+    "prepare": "npm run build"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-plugin-functional": "^5.0.7",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
