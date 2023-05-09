@@ -1,6 +1,6 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",

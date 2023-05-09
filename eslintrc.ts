@@ -27,7 +27,7 @@ export default {
     ],
     'linebreak-style': ['error', 'unix'],
     'no-constant-condition': ['error', { checkLoops: false }],
-    quotes: ['error', 'single'],
+    quotes: ['error', 'single', { 'avoidEscape': true }],
     semi: ['error', 'always'],
     '@typescript-eslint/consistent-type-imports': 'error',
     'functional/immutable-data': 'error',
