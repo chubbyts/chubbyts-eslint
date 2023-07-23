@@ -21,6 +21,10 @@ getAllFiles(commonJsDistDir).map((file) => {
   const fromFolder = dirname(file);
   const toFolder = distDir + fromFolder.substring(commonJsDistDir.length);
 
+  if (!name.match(/\.js$/)) {
+    return;
+  }
+
   if (!existsSync(toFolder)) {
     mkdirSync(toFolder, { recursive: true });
   }
