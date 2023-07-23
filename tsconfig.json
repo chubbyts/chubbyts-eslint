@@ -1,9 +1,6 @@
 {
     "compilerOptions": {
-        "declaration": true,
-        "declarationDir": "dist",
-        "emitDeclarationOnly": true,
-        "isolatedModules": true,
+        "target": "ES2021",
         "strict": true
     },
     "include": [

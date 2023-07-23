@@ -1,7 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",
@@ -11,9 +11,7 @@
   "license": "MIT",
   "repository": "chubbyts/chubbyts-eslint",
   "scripts": {
-    "build:types": "tsc --emitDeclarationOnly",
-    "build:dual": "babel-dual-package --out-dir dist --no-cjs-dir --out-file-extension esm:.esm.js,cjs:.cjs.js --extensions .ts,.tsx eslintrc.ts",
-    "build": "npm run build:types && npm run build:dual",
+    "build": "rm -rf ./dist && tsc -b ./tsconfig.types.json ./tsconfig.esm.json ./tsconfig.cjs.json && node ./rename-commonjs.cjs",
     "cs-fix": "prettier --write eslintrc.ts",
     "cs": "prettier --check eslintrc.ts",
     "prepare": "npm run build"
@@ -27,6 +25,14 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    "./*": {
+      "types": "./*.d.ts",
+      "require": "./*.cjs",
+      "import": "./*.js",
+      "default": "./*.js"
+    }
+  },
   "engines": {
     "node": ">=16"
   },
@@ -39,7 +45,7 @@
     "eslint-plugin-import": "^2.27.5"
   },
   "devDependencies": {
-    "babel-dual-package": "^1.0.0-rc.2",
+    "@types/node": "^20.4.4",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6"
   },
