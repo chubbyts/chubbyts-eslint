@@ -1,6 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
-  "version": "1.1.2",
+  "type": "module",
+  "version": "2.0.0",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",
@@ -10,9 +11,9 @@
   "license": "MIT",
   "repository": "chubbyts/chubbyts-eslint",
   "scripts": {
+    "build": "rm -Rf dist && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
     "cs-fix": "prettier --write eslintrc.ts",
     "cs": "prettier --check eslintrc.ts",
-    "build": "rm -Rf dist && tsc",
     "prepare": "npm run build"
   },
   "prettier": {
@@ -24,13 +25,21 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    "./*": {
+      "types": "./dist/types/*.d.ts",
+      "require": "./dist/cjs/*.js",
+      "import": "./dist/esm/*.js",
+      "default": "./dist/esm/*.js"
+    }
+  },
   "engines": {
     "node": ">=16"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.44.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-functional": "^5.0.8",
     "eslint-plugin-import": "^2.27.5"
