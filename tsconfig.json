@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
-        "target": "ES2021",
+        "jsx": "react",
         "moduleResolution": "node",
-        "strict": true
+        "strict": true,
+        "target": "ES2021"
     },
     "include": [
         "eslintrc.ts"

@@ -1,7 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
   "type": "module",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "chubbyts/chubbyts-eslint",
   "scripts": {
-    "build": "rm -rf ./dist && tsc -b ./tsconfig.types.json ./tsconfig.esm.json ./tsconfig.cjs.json && node ./rename-commonjs.cjs",
+    "build": "node ./build.js",
     "cs-fix": "prettier --write eslintrc.ts",
     "cs": "prettier --check eslintrc.ts",
     "prepare": "npm run build"
@@ -29,8 +29,8 @@
     "./*": {
       "types": "./*.d.ts",
       "require": "./*.cjs",
-      "import": "./*.js",
-      "default": "./*.js"
+      "import": "./*.mjs",
+      "default": "./*.mjs"
     }
   },
   "engines": {
@@ -45,6 +45,7 @@
     "eslint-plugin-import": "^2.27.5"
   },
   "devDependencies": {
+    "@chubbyts/chubbyts-packaging": "^2.0.3",
     "@types/node": "^20.4.4",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6"
