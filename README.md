@@ -26,7 +26,7 @@ npm i @chubbyts/chubbyts-eslint@^2.0.3
 
 ## Copyright
 
-2023 Dominik Zogg
+2024 Dominik Zogg
 
 [1]: https://www.npmjs.com/package/@chubbyts/chubbyts-eslint
 [2]: https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
