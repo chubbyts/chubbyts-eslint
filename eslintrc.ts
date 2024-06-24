@@ -15,7 +15,7 @@ export default {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'functional'],
   rules: {
     '@typescript-eslint/no-unused-vars': [
       'error',
@@ -30,6 +30,8 @@ export default {
     quotes: ['error', 'single', { 'avoidEscape': true }],
     semi: ['error', 'always'],
     '@typescript-eslint/consistent-type-imports': 'error',
+    'functional/immutable-data': 'error',
+    'functional/no-let': 'error',
     'import/order': 'error',
     'no-param-reassign': 'error',
     'no-var': 'error',
