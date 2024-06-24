@@ -1,7 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
   "type": "module",
-  "version": "2.0.4",
+  "version": "2.0.7",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",
@@ -46,9 +46,9 @@
   },
   "devDependencies": {
     "@chubbyts/chubbyts-packaging": "^2.0.7",
-    "@types/node": "^20.14.6",
+    "@types/node": "^20.14.8",
     "prettier": "^3.3.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   },
   "publishConfig": {
     "access": "public"

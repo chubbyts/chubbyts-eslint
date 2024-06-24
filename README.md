@@ -24,6 +24,38 @@ Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-eslint][1].
 npm i @chubbyts/chubbyts-eslint@^2.0.4
 ```
 
+## Configuration
+
+### tsconfig.eslint.json
+
+If you want to lint files that are not part of your tsconfig.json. Like for example tests you need a custom `tsconfig.eslint.json`.
+
+```json
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "src",
+        "tests"
+    ],
+}
+
+```
+
+### .eslintrc.cjs
+
+```js
+const config = require('@chubbyts/chubbyts-eslint/dist/eslintrc').default;
+
+module.exports = {
+  ...config,
+  parserOptions: {
+    ...config.parserOptions,
+    project: './tsconfig.eslint.json', // or tsconfig.json if no custom tsconfig is needed
+  },
+};
+
+```
+
 ## Copyright
 
 2024 Dominik Zogg
