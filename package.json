@@ -1,7 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
   "type": "module",
-  "version": "2.0.5",
+  "version": "2.0.4",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",

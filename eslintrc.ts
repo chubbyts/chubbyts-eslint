@@ -32,6 +32,7 @@ export default {
     '@typescript-eslint/consistent-type-imports': 'error',
     'functional/immutable-data': 'error',
     'functional/no-let': 'error',
+    'functional/prefer-tacit': 'error',
     'import/order': 'error',
     'no-param-reassign': 'error',
     'no-var': 'error',
