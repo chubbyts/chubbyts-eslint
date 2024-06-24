@@ -13,8 +13,7 @@ ESLint Configuration for chubbyts libraries / framework / projects.
  * [@typescript-eslint/parser][3]: ^7.13.1
  * [eslint][4]: ^8.57.0
  * [eslint-import-resolver-typescript][5]: ^3.6.1
- * [eslint-plugin-functional][6]: ^6.6.0
- * [eslint-plugin-import][7]: ^2.29.1
+ * [eslint-plugin-import][6]: ^2.29.1
 
 ## Installation
 
@@ -33,5 +32,4 @@ npm i @chubbyts/chubbyts-eslint@^2.0.5
 [3]: https://www.npmjs.com/package/@typescript-eslint/parser
 [4]: https://www.npmjs.com/package/eslint
 [5]: https://www.npmjs.com/package/eslint-import-resolver-typescript
-[6]: https://www.npmjs.com/package/eslint-plugin-functional
-[7]: https://www.npmjs.com/package/eslint-plugin-import
+[6]: https://www.npmjs.com/package/eslint-plugin-import
