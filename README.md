@@ -8,52 +8,69 @@ ESLint Configuration for chubbyts libraries / framework / projects.
 
 ## Requirements
 
- * node: 16
- * [@typescript-eslint/eslint-plugin][2]: ^7.13.1
- * [@typescript-eslint/parser][3]: ^7.13.1
- * [eslint][4]: ^8.57.0
- * [eslint-import-resolver-typescript][5]: ^3.6.1
- * [eslint-plugin-functional][6]: ^6.6.0
- * [eslint-plugin-import][7]: ^2.29.1
+ * node: 18
+ * [@eslint/js"][2]: ^9.17.0
+ * [eslint][3]: ^9.17.0
+ * [eslint-import-resolver-typescript][4]: ^3.7.0
+ * [eslint-plugin-functional][5]: ^7.2.0
+ * [eslint-plugin-import][6]: ^2.31.0
+ * [eslint-plugin-unused-imports][7]: ^4.1.4
+ * [typescript-eslint][8]: ^8.19.0
 
 ## Installation
 
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-eslint][1].
 
 ```sh
-npm i @chubbyts/chubbyts-eslint@^2.0.4
+npm i @chubbyts/chubbyts-eslint@^3.0.0
 ```
 
 ## Configuration
 
-### tsconfig.eslint.json
+### Commonjs
 
-If you want to lint files that are not part of your tsconfig.json. Like for example tests you need a custom `tsconfig.eslint.json`.
+#### tsconfig.eslint.json
+
+Example for a codebase with typescript files in src and tests:
 
 ```json
 {
-    "extends": "./tsconfig.json",
-    "include": [
-        "src",
-        "tests"
-    ],
+  "extends": "./tsconfig.json",
+  "include": [
+    "eslint.config.cjs",
+    "src",
+    "tests"
+  ],
 }
-
 ```
 
-### .eslintrc.cjs
+#### eslint.config.cjs
 
 ```js
-const config = require('@chubbyts/chubbyts-eslint/dist/eslintrc').default;
+module.exports = require('@chubbyts/chubbyts-eslint/eslint.config').default;
+```
 
-module.exports = {
-  ...config,
-  parserOptions: {
-    ...config.parserOptions,
-    project: './tsconfig.eslint.json', // or tsconfig.json if no custom tsconfig is needed
-  },
-};
+### Module
 
+#### tsconfig.eslint.json
+
+Example for a codebase with typescript files in src and tests:
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "eslint.config.mjs",
+    "src",
+    "tests"
+  ],
+}
+```
+
+#### eslint.config.mjs
+
+```js
+export { default } from '@chubbyts/chubbyts-eslint/eslint.config';
 ```
 
 ## Copyright
@@ -61,9 +78,10 @@ module.exports = {
 2024 Dominik Zogg
 
 [1]: https://www.npmjs.com/package/@chubbyts/chubbyts-eslint
-[2]: https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-[3]: https://www.npmjs.com/package/@typescript-eslint/parser
-[4]: https://www.npmjs.com/package/eslint
-[5]: https://www.npmjs.com/package/eslint-import-resolver-typescript
-[6]: https://www.npmjs.com/package/eslint-plugin-functional
-[7]: https://www.npmjs.com/package/eslint-plugin-import
+[2]: https://www.npmjs.com/package/@eslint/js
+[3]: https://www.npmjs.com/package/eslint
+[4]: https://www.npmjs.com/package/eslint-import-resolver-typescript
+[5]: https://www.npmjs.com/package/eslint-plugin-functional
+[6]: https://www.npmjs.com/package/eslint-plugin-import
+[7]: https://www.npmjs.com/package/eslint-plugin-unused-imports
+[8]: https://www.npmjs.com/package/typescript-eslint
