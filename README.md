@@ -1,6 +1,18 @@
 # chubbyts-eslint
 
+[![CI](https://github.com/chubbyts/chubbyts-eslint/workflows/CI/badge.svg?branch=master)](https://github.com/chubbyts/chubbyts-eslint/actions?query=workflow%3ACI)
 [![npm-version](https://img.shields.io/npm/v/@chubbyts/chubbyts-eslint.svg)](https://www.npmjs.com/package/@chubbyts/chubbyts-eslint)
+
+[![bugs](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=bugs)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![code_smells](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=code_smells)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![duplicated_lines_density](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![ncloc](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=ncloc)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![sqale_rating](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![alert_status](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=alert_status)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![reliability_rating](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![security_rating](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=security_rating)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![sqale_index](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=sqale_index)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
+[![vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-eslint&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-eslint)
 
 ## Description
 
@@ -22,7 +34,7 @@ ESLint Configuration for chubbyts libraries / framework / projects.
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-eslint][1].
 
 ```sh
-npm i @chubbyts/chubbyts-eslint@^3.0.0
+npm i @chubbyts/chubbyts-eslint@^3.0.1
 ```
 
 ## Configuration
@@ -47,7 +59,7 @@ Example for a codebase with typescript files in src and tests:
 #### eslint.config.cjs
 
 ```js
-module.exports = require('@chubbyts/chubbyts-eslint/eslint.config').default;
+module.exports = require('@chubbyts/chubbyts-eslint/dist/eslint.config').default;
 ```
 
 ### Module
@@ -70,7 +82,7 @@ Example for a codebase with typescript files in src and tests:
 #### eslint.config.mjs
 
 ```js
-export { default } from '@chubbyts/chubbyts-eslint/eslint.config';
+export { default } from '@chubbyts/chubbyts-eslint/dist/eslint.config';
 ```
 
 ## Copyright
