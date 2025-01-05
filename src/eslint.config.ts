@@ -13,7 +13,6 @@ import eslintUnusedImports from 'eslint-plugin-unused-imports';
 export default eslintTypescriptConfig({
   extends: [
     eslint.configs.recommended,
-    eslintImport.flatConfigs.react,
     eslintImport.flatConfigs.recommended,
     eslintImport.flatConfigs.typescript,
     eslintTypescriptConfigs.strict,

@@ -34,7 +34,7 @@ ESLint Configuration for chubbyts libraries / framework / projects.
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-eslint][1].
 
 ```sh
-npm i @chubbyts/chubbyts-eslint@^3.0.3
+npm i @chubbyts/chubbyts-eslint@^3.0.4
 ```
 
 ## Configuration
