@@ -39,29 +39,6 @@ npm i @chubbyts/chubbyts-eslint@^3.0.4
 
 ## Configuration
 
-### Commonjs
-
-#### tsconfig.eslint.json
-
-Example for a codebase with typescript files in src and tests:
-
-```json
-{
-  "extends": "./tsconfig.json",
-  "include": [
-    "eslint.config.cjs",
-    "src",
-    "tests"
-  ],
-}
-```
-
-#### eslint.config.cjs
-
-```js
-module.exports = require('@chubbyts/chubbyts-eslint/dist/eslint.config').default;
-```
-
 ### Module
 
 #### tsconfig.eslint.json
@@ -72,14 +49,14 @@ Example for a codebase with typescript files in src and tests:
 {
   "extends": "./tsconfig.json",
   "include": [
-    "eslint.config.mjs",
+    "eslint.config.js",
     "src",
     "tests"
   ],
 }
 ```
 
-#### eslint.config.mjs
+#### eslint.config.js
 
 ```js
 export { default } from '@chubbyts/chubbyts-eslint/dist/eslint.config';
