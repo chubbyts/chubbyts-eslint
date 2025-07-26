@@ -3,28 +3,24 @@ import eslint from '@eslint/js';
 import eslintFunctional from 'eslint-plugin-functional';
 // @ts-ignore
 import eslintImport from 'eslint-plugin-import';
-import {
-  config as eslintTypescriptConfig,
-  configs as eslintTypescriptConfigs,
-  parser as eslintTypescriptParser,
-} from 'typescript-eslint';
+import tseslint, { ConfigArray } from 'typescript-eslint';
 import eslintUnusedImports from 'eslint-plugin-unused-imports';
 
-export default eslintTypescriptConfig({
+const config: ConfigArray = tseslint.config({
   extends: [
     eslint.configs.recommended,
     eslintImport.flatConfigs.recommended,
     eslintImport.flatConfigs.typescript,
-    eslintTypescriptConfigs.strict,
+    ...tseslint.configs.strict,
   ],
   plugins: {
     functional: eslintFunctional,
     'unused-imports': eslintUnusedImports,
   },
   languageOptions: {
-    parser: eslintTypescriptParser,
+    parser: tseslint.parser,
     parserOptions: {
-      project: './tsconfig.eslint.json',
+      project: process.cwd() + '/tsconfig.eslint.json',
     },
   },
   rules: {
@@ -57,3 +53,5 @@ export default eslintTypescriptConfig({
     },
   },
 });
+
+export default config;
