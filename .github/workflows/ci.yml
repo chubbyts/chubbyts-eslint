@@ -42,6 +42,17 @@ jobs:
         with:
           node-version: '22'
       - run: npm install
+  node24:
+    name: Node 24
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: checkout node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install
       - run: npm run cs
       - name: sonarcloud.io
         uses: sonarsource/sonarqube-scan-action@v5.3.1
