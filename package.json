@@ -1,7 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-eslint",
   "type": "module",
-  "version": "4.0.7",
+  "version": "4.0.9",
   "description": "ESLint Configuration for chubbyts libraries / framework / projects.",
   "keywords": [
     "chubbyts",
@@ -36,19 +36,18 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@eslint/js": "^9.35.0",
-    "eslint": "^9.35.0",
+    "@eslint/js": "9.38.0",
+    "eslint": "9.38.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-functional": "^9.0.2",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-unused-imports": "^4.2.0",
-    "typescript-eslint": "^8.43.0"
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "typescript-eslint": "^8.46.2"
   },
   "devDependencies": {
-    "@chubbyts/chubbyts-packaging": "^4.0.1",
-    "@types/node": "^24.3.1",
+    "@types/node": "^24.10.0",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "publishConfig": {
     "access": "public"
