@@ -14,7 +14,7 @@
     "build": "tsc",
     "cs-fix": "prettier --write src",
     "cs": "prettier --check src",
-    "prepare": "npm run build"
+    "prepare": "pnpm run build"
   },
   "prettier": {
     "printWidth": 120,
@@ -51,5 +51,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "unrs-resolver"
+    ]
   }
 }

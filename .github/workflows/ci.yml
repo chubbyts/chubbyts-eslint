@@ -19,7 +19,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-      - run: npm install
+      - run: npm install -g pnpm@latest
+      - run: pnpm install
   node20:
     name: Node 20
     runs-on: ubuntu-24.04
@@ -30,7 +31,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm install
+      - run: npm install -g pnpm@latest
+      - run: pnpm install
   node22:
     name: Node 22
     runs-on: ubuntu-24.04
@@ -41,7 +43,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: npm install
+      - run: npm install -g pnpm@latest
+      - run: pnpm install
   node24:
     name: Node 24
     runs-on: ubuntu-24.04
@@ -52,8 +55,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
-      - run: npm install
-      - run: npm run cs
+      - run: npm install -g pnpm@latest
+      - run: pnpm install
+      - run: pnpm cs
       - name: sonarcloud.io
         uses: sonarsource/sonarqube-scan-action@v6.0.0
         env:
