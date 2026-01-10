@@ -64,7 +64,7 @@ export { default } from '@chubbyts/chubbyts-eslint/dist/eslint.config';
 
 ## Copyright
 
-2025 Dominik Zogg
+2026 Dominik Zogg
 
 [1]: https://www.npmjs.com/package/@chubbyts/chubbyts-eslint
 [2]: https://www.npmjs.com/package/@eslint/js
