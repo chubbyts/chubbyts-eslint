@@ -5,10 +5,14 @@
         "esModuleInterop": true,
         "module": "nodenext",
         "moduleResolution": "nodenext",
+        "rootDir": ".",
         "outDir": "dist",
         "skipLibCheck": true,
         "strict": true,
-        "target": "ES2021"
+        "target": "ES2021",
+        "types": [
+            "node"
+        ]
     },
     "include": [
         "src"
